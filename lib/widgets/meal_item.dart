@@ -49,14 +49,18 @@ class MealItem extends StatelessWidget {
                     Row(
                       spacing: 8.0,
                       children: [
+                        Icon(Icons.access_time_outlined,
+                            size: 16, color: Colors.white),
                         Text(
                           meal.duration > 0 ? "${meal.duration} minutes" : "",
                           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                                 color: Colors.white,
                               )
                           ),
+                          Icon(Icons.work_outline,
+                            size: 16, color: Colors.white),
                           Text(
-                          meal.complexity.name,
+                          meal.complexity.name[0].toUpperCase() + meal.complexity.name.substring(1),
                           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                                 color: Colors.white,
                               )

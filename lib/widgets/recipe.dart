@@ -38,7 +38,13 @@ class Recipe extends StatelessWidget {
               fontWeight: FontWeight.bold, 
               color: Theme.of(context).colorScheme.onSurface)
               ),
-            subtitle: Text("> ${meal.steps.join('\n> ')}"),
+            subtitle: Column(children: [
+              for (var step in meal.steps) 
+                ListTile(
+                  leading: const Icon(Icons.check_circle_outline),
+                  title: Text(step),
+                )
+            ],),
           ),
         ];
     return ListView(
