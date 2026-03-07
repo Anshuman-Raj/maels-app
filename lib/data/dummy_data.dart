@@ -404,3 +404,5 @@ const dummyMeals = [
     isLactoseFree: true,
   ),
 ];
+
+final List<Meal> favourites = [];
